@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dữ liệu thông tin doanh nghiệp</title>
+</head>
+
+<body>
+    <h1>Dữ liệu thông tin doanh nghiệp</h1>
+    <form id="scrapingForm" action="{{ url_for('start_scraping') }}" method="post">
+        <label for="spreadsheet_name">Dữ liệu:</label>
+        <select id="spreadsheet_name" name="spreadsheet_name" required>
+            <option value="">Chọn thông tin doanh nghiệp</option>
+            <option value="thành phố Hồ Chí Minh">Thông tin doanh nghiệp thành phố Hồ Chí Minh</option>
+            <option value="thành phố Hà Nội">Thông tin doanh nghiệp thành phố Hà Nội</option>
+            <option value="thành phố Hải Phòng">Thông tin doanh nghiệp thành phố Hải Phòng</option>
+            <option value="thành phố Đà Nẵng">Thông tin doanh nghiệp thành phố Đà Nẵng</option>
+            <option value="thành phố Cần Thơ">Thông tin doanh nghiệp thành phố Cần Thơ</option>
+            <option value="tỉnh An Giang">Thông tin doanh nghiệp tỉnh An Giang</option>
+            <option value="tỉnh Bà Rịa - Vũng Tàu">Thông tin doanh nghiệp tỉnh Bà Rịa - Vũng Tàu</option>
+            <option value="tỉnh Bạc Liêu">Thông tin doanh nghiệp tỉnh Bạc Liêu</option>
+            <option value="tỉnh Bắc Giang">Thông tin doanh nghiệp tỉnh Bắc Giang</option>
+            <option value="tỉnh Bắc Kạn">Thông tin doanh nghiệp tỉnh Bắc Kạn</option>
+            <option value="tỉnh Bắc Ninh">Thông tin doanh nghiệp tỉnh Bắc Ninh</option>
+            <option value="tỉnh Bến Tre">Thông tin doanh nghiệp tỉnh Bến Tre</option>
+            <option value="tỉnh Bình Định">Thông tin doanh nghiệp tỉnh Bình Định</option>
+            <option value="tỉnh Bình Dương">Thông tin doanh nghiệp tỉnh Bình Dương</option>
+            <option value="tỉnh Bình Phước">Thông tin doanh nghiệp tỉnh Bình Phước</option>
+            <option value="tỉnh Bình Thuận">Thông tin doanh nghiệp tỉnh Bình Thuận</option>
+            <option value="tỉnh Cà Mau">Thông tin doanh nghiệp tỉnh Cà Mau</option>
+            <option value="tỉnh Cao Bằng">Thông tin doanh nghiệp tỉnh Cao Bằng</option>
+            <option value="tỉnh Đắk Lắk">Thông tin doanh nghiệp tỉnh Đắk Lắk</option>
+            <option value="tỉnh Đắk Nông">Thông tin doanh nghiệp tỉnh Đắk Nông</option>
+            <option value="tỉnh Điện Biên">Thông tin doanh nghiệp tỉnh Điện Biên</option>
+            <option value="tỉnh Đồng Nai">Thông tin doanh nghiệp tỉnh Đồng Nai</option>
+            <option value="tỉnh Đồng Tháp">Thông tin doanh nghiệp tỉnh Đồng Tháp</option>
+            <option value="tỉnh Gia Lai">Thông tin doanh nghiệp tỉnh Gia Lai</option>
+            <option value="tỉnh Hà Giang">Thông tin doanh nghiệp tỉnh Hà Giang</option>
+            <option value="tỉnh Hà Nam">Thông tin doanh nghiệp tỉnh Hà Nam</option>
+            <option value="tỉnh Hà Tĩnh">Thông tin doanh nghiệp tỉnh Hà Tĩnh</option>
+            <option value="tỉnh Hải Dương">Thông tin doanh nghiệp tỉnh Hải Dương</option>
+            <option value="tỉnh Hậu Giang">Thông tin doanh nghiệp tỉnh Hậu Giang</option>
+            <option value="tỉnh Hòa Bình">Thông tin doanh nghiệp tỉnh Hòa Bình</option>
+            <option value="tỉnh Hưng Yên">Thông tin doanh nghiệp tỉnh Hưng Yên</option>
+            <option value="tỉnh Khánh Hòa">Thông tin doanh nghiệp tỉnh Khánh Hòa</option>
+            <option value="tỉnh Kiên Giang">Thông tin doanh nghiệp tỉnh Kiên Giang</option>
+            <option value="tỉnh Kon Tum">Thông tin doanh nghiệp tỉnh Kon Tum</option>
+            <option value="tỉnh Lai Châu">Thông tin doanh nghiệp tỉnh Lai Châu</option>
+            <option value="tỉnh Lâm Đồng">Thông tin doanh nghiệp tỉnh Lâm Đồng</option>
+            <option value="tỉnh Lạng Sơn">Thông tin doanh nghiệp tỉnh Lạng Sơn</option>
+            <option value="tỉnh Lào Cai">Thông tin doanh nghiệp tỉnh Lào Cai</option>
+            <option value="tỉnh Long An">Thông tin doanh nghiệp tỉnh Long An</option>
+            <option value="tỉnh Nam Định">Thông tin doanh nghiệp tỉnh Nam Định</option>
+            <option value="tỉnh Nghệ An">Thông tin doanh nghiệp tỉnh Nghệ An</option>
+            <option value="tỉnh Ninh Bình">Thông tin doanh nghiệp tỉnh Ninh Bình</option>
+            <option value="tỉnh Ninh Thuận">Thông tin doanh nghiệp tỉnh Ninh Thuận</option>
+            <option value="tỉnh Phú Thọ">Thông tin doanh nghiệp tỉnh Phú Thọ</option>
+            <option value="tỉnh Phú Yên">Thông tin doanh nghiệp tỉnh Phú Yên</option>
+            <option value="tỉnh Quảng Bình">Thông tin doanh nghiệp tỉnh Quảng Bình</option>
+            <option value="tỉnh Quảng Nam">Thông tin doanh nghiệp tỉnh Quảng Nam</option>
+            <option value="tỉnh Quảng Ngãi">Thông tin doanh nghiệp tỉnh Quảng Ngãi</option>
+            <option value="tỉnh Quảng Ninh">Thông tin doanh nghiệp tỉnh Quảng Ninh</option>
+            <option value="tỉnh Quảng Trị">Thông tin doanh nghiệp tỉnh Quảng Trị</option>
+            <option value="tỉnh Sóc Trăng">Thông tin doanh nghiệp tỉnh Sóc Trăng</option>
+            <option value="tỉnh Sơn La">Thông tin doanh nghiệp tỉnh Sơn La</option>
+            <option value="tỉnh Tây Ninh">Thông tin doanh nghiệp tỉnh Tây Ninh</option>
+            <option value="tỉnh Thái Bình">Thông tin doanh nghiệp tỉnh Thái Bình</option>
+            <option value="tỉnh Thái Nguyên">Thông tin doanh nghiệp tỉnh Thái Nguyên</option>
+            <option value="tỉnh Thanh Hóa">Thông tin doanh nghiệp tỉnh Thanh Hóa</option>
+            <option value="tỉnh Thừa Thiên Huế">Thông tin doanh nghiệp tỉnh Thừa Thiên Huế</option>
+            <option value="tỉnh Tiền Giang">Thông tin doanh nghiệp tỉnh Tiền Giang</option>
+            <option value="tỉnh Trà Vinh">Thông tin doanh nghiệp tỉnh Trà Vinh</option>
+            <option value="tỉnh Tuyên Quang">Thông tin doanh nghiệp tỉnh Tuyên Quang</option>
+            <option value="tỉnh Vĩnh Long">Thông tin doanh nghiệp tỉnh Vĩnh Long</option>
+            <option value="tỉnh Vĩnh Phúc">Thông tin doanh nghiệp tỉnh Vĩnh Phúc</option>
+            <option value="tỉnh Yên Bái">Thông tin doanh nghiệp tỉnh Yên Bái</option>
+        </select>
+        <button type="submit" id="startButton">Start Scraping</button>
+    </form>
+    {% with messages = get_flashed_messages(with_categories=true) %} {% if messages %}
+    <ul>
+        {% for category, message in messages %}
+        <li class="{{ category }}">{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %} {% endwith %}
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+Flask
+Celery 
+gspread
+google-auth
+requests
+beautifulsoup4
+selenium
+MarkupSafe
+websocket-client
+typing-extensions
+soupsieve
+oauth2client 
